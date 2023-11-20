@@ -251,10 +251,12 @@ function getCube(num) {
  *   10 => 55
  */
 function getFibonacciNumber(index) {
-  let a = 1;
+  let a = 0;
   let b = 1;
-  for (let i = 3; i <= index; i += 1) {
-    const c = a + b;
+  let c;
+  if (index === 0) return a;
+  for (let i = 2; i <= index; i += 1) {
+    c = a + b;
     a = b;
     b = c;
   }
